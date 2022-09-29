@@ -1,0 +1,27 @@
+server:
+  port: 8080
+servlet:
+  context-path: /
+#jdbcUrl: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+
+spring:
+  session:
+    store-type: none
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: "root"
+    password: "123456"
+  data:
+    elasticsearch:
+      name: "WUmYlKI"
+      cluster-uuid: "h2ZSo8erSyiFAsH06s2rCg"
+      cluster-name: "es_test"
+      cluster-nodes: "127.0.0.1:9300"
+mybatis:
+  #标注mybatis配置文件的位置
+  #config-location: classpath:mybatis-config.xml
+  #标注待解析的mapper的xml文件位置
+  mapper-locations: classpath:mapper/*.xml
+  #标注实体类位置
+  type-aliases-package: estest.entity.*
